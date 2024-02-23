@@ -1,9 +1,13 @@
-numList = [1,22,33,55]
 
-for i in range(0,len(numList)):
-    for j in range(0,len(numList)-1):
-        if(numList[j] < numList[j+1]):
+# Reversing a Number
 
-          numList[j] ,numList[j+1]  = numList[j+1],numList[j]
+number = int(input("Enter a Number ? "))
 
-print(numList)
+rev = 0
+temp = number
+while(temp>0):
+    remainder = temp % 10
+    rev = rev*10+remainder
+    temp = temp//10
+
+print(rev)
